@@ -52,6 +52,7 @@ class VisualizationNode:
         self._pending_landmarks = json.loads(msg.data)
 
     def on_path(self, msg):
+        print('received path', msg)
         self._pending_path = json.loads(msg.data)
 
     def on_status(self, msg):
